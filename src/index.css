@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #fff0f3; 
+  color: #2d3a31; 
+}
+
+.container {
+  max-width: 1100px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 40px 20px 36px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #3a5a40;
+}
+
+/* Tabel */
+.table-wrapper {
+  background-color: #ffffff;
+  border: 2px solid #dbe8de;
+  border-radius: 12px;
+  overflow-x: auto;
+  box-shadow: 0 4px 12px rgba(74, 124, 89, 0.08);
+}
+
+table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #dbe8de;
+  font-size: 14px;
+}
+
+th {
+  background-color: #dbe8de; 
+  color: #2d3a31;
+  font-weight: 700;
+}
+
+tbody tr:hover {
+  background-color: #fff8fa;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Tombol */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: #4a7c59; 
+  color: #ffffff;
+  padding: 9px 18px;
+}
+
+.btn-primary:hover {
+  background-color: #3a6346;
+}
+
+.btn-danger {
+  background-color: #d95d78; 
+  color: #ffffff;
+  padding: 9px 18px;
+}
+
+.btn-danger:hover {
+  background-color: #c04863;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 9px;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.btn-view {
+  background-color: #4a7c59; 
+}
+
+.btn-view:hover {
+  background-color: #3a6346;
+}
+
+.btn-delete {
+  background-color: #d95d78; 
+}
+
+.btn-delete:hover {
+  background-color: #c04863;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(45, 58, 49, 0.45);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background-color: #fff8fa;
+  border: 2px solid #dbe8de;
+  width: 100%;
+  max-width: 440px;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(45, 58, 49, 0.18);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 19px;
+  color: #3a5a40;
+  margin-bottom: 18px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3a5a40;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 9px 12px;
+  background-color: #ffffff;
+  border: 1.5px solid #c7d9cc;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2d3a31;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #4a7c59;
+  box-shadow: 0 0 0 3px rgba(219, 232, 222, 0.7);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Halaman Detail */
+.detail-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.detail-card {
+  width: 100%;
+  max-width: 650px;
+  background-color: #ffffff;
+  border: 2px solid #dbe8de;
+  border-radius: 14px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  box-shadow: 0 6px 20px rgba(74, 124, 89, 0.1);
+}
+
+.detail-item {
+  margin-bottom: 16px;
+}
+
+.detail-item h3 {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #4a7c59;
+}
+
+.detail-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #2d3a31;
+}
+
+.description-box {
+  background-color: #fff8fa;
+  border: 1.5px solid #f5d0d8;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 95px;
+  font-size: 14px;
+  color: #2d3a31;
+  line-height: 1.5;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+/* Ikon di samping judul */
+.title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Wrapper Footer Bawah */
+.bottom-footer {
+  position: relative;
+  margin-top: auto;
+  padding-top: 48px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.footer-quote {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: #4a7c59;
+  letter-spacing: 0.4px;
+  text-align: center;
+}
+
+.corner-decoration {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 16px 24px 16px;
+  }
+
+  /* Header & Judul */
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .title-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .btn-primary,
+  .btn-danger {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  /* Footer Bawah di HP */
+  .bottom-footer {
+    padding-top: 32px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer-quote {
+    font-size: 19px;
+    line-height: 1.4;
+  }
+
+  .corner-decoration {
+    position: static;
+    width: 80px;
+  }
+
+  /* Modal Tambah & Update di HP */
+  .modal-content {
+    width: 92%;
+    padding: 20px 16px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  /* Halaman Detail */
+  .detail-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .detail-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
